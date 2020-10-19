@@ -1,10 +1,11 @@
 def count_elements(array)
-  new_hash = Hash.new(0)
-  
-  array.each do |strings|
-    new_hash[strings] += 1
-  end 
+  new_hash = {}
+  array.each do |animals|
+    if new_hash[animals]
+      new_hash[animals] += 1
+    else
+      new_hash[animals] = 1
+    end
+  end
   new_hash
-  
 end
- 
